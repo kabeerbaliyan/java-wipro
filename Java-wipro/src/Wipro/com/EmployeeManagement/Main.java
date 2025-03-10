@@ -17,17 +17,25 @@ public class Main {
         system.retrieveTasksByPriority();
         system.retrieveTasksByEmployee("Alice");
         system.retrieveTasksByDepartment("IT");
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
 
+        
+        
+        
+        System.out.println("Welcome to the Eclipse");
         // Update task status
         for (Task task : system.getPendingTasks()) { // Using getter method
             if (task.getTaskId() == 102) {
                 task.setStatus("Completed");
             }
         }
-
+        
         // Remove completed tasks
         system.removeCompletedTasks();
-
+        
         // Track pending tasks
         system.trackPendingTasks();
     }

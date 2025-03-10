@@ -85,9 +85,10 @@ public class StreamAPIExamples {
         int parallelSum = numbers.parallelStream().reduce(0, Integer::sum);
         System.out.println("Parallel Stream Sum: " + parallelSum);
 
-        // 14. Convert List to Map (Employee ID → Employee Name)
-        Map<Integer, String> employeeMap = employees.stream().collect(Collectors.toMap(e -> e.id, e -> e.name));
-        System.out.println("Employee Map: " + employeeMap);
+        Collection<Integer> employees;
+		// 14. Convert List to Map (Employee ID → Employee Name)
+   //     Map<Object, Object> employeeMap = employees.stream().collect(Collectors.toMap;//(e -> e.id, e -> e.name));
+      //  System.out.println("Employee Map: " + employeeMap);
 
         // 15. Count Occurrences of Each Character in a String
         String input = "aabbcdeff";
@@ -100,4 +101,3 @@ public class StreamAPIExamples {
         System.out.println("Are Anagrams: " + areAnagrams);
     }
 }
-=
